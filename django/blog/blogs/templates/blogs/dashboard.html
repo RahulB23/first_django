@@ -1,0 +1,11 @@
+
+<h1> {{name}} </h1>
+{% if blog_list2 %}
+    <ul>
+    {% for blog in blog_list2 %}
+        <li>{{ blog.blog_text }}   -----{{blog.user}}</a></li>
+    {% endfor %}
+    </ul>
+{% else %}
+    <p>No Blogs are available.</p>
+{% endif %}

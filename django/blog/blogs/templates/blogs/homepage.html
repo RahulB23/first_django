@@ -1,0 +1,12 @@
+{% csrf_token %}
+
+
+{% if blog_list %}
+    <ul>
+    {% for blog in blog_list %}
+        <li>{{ blog.blog_text }}   -----{{blog.user}}</a></li>
+    {% endfor %}
+    </ul>
+{% else %}
+    <p>No Blogs are available.</p>
+{% endif %}
